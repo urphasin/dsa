@@ -16,7 +16,12 @@ class ListNode:
 
 
 def traverse(L: ListNode):
-    pass
+  while L:
+    print(L.val, end=" ")
+    L = L.next
+  print()
+    
+  
 def addTwoNumbers(l1: ListNode, l2: ListNode):
     pass
 
@@ -28,7 +33,7 @@ def ReverseLinkedList(L: ListNode):
       nxt = curr.next
       curr.next = prev
       prev = curr
-      curr = next
+      curr = nxt
     return prev
 
 
@@ -50,5 +55,9 @@ N_1.next = N_2
 
 if __name__ == "__main__":
     # demo = addTwoNumbers(M_0, N_0)
+    print("Before Reverse: ", end= " ")
+    traverse(M_0)
+    
+    print("After Reverse: ", end= " ")
     traverse(ReverseLinkedList(M_0))
     # traverse(demo)
